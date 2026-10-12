@@ -1,6 +1,6 @@
-# _CONVENTIONS.md — binding rules for every desengs-* skill
+# _CONVENTIONS.md — binding rules for every * skill
 
-Every skill in this folder distills ONE source listed on https://desengs.com/ into a self-contained, stack-neutral design-engineering skill. Together they form the canon referenced by `desengs-ui-ux-master`. Read this file fully before writing a skill.
+Every skill in this folder distills ONE curated source into a self-contained, stack-neutral design-engineering skill. Together they form the canon referenced by `ui-ux-canon`. Read this file fully before writing a skill.
 
 ## Hard rules
 
@@ -9,14 +9,14 @@ Every skill in this folder distills ONE source listed on https://desengs.com/ in
 3. **Frontmatter** (exact keys):
    ```
    ---
-   name: desengs-<slug>
+   name: <slug>
    description: Use when <trigger condition>. <essence in one clause>.
    source: <URL>[; <URL2>]
    category: principle | library | tool | reference | essay | portfolio
    ---
    ```
    `name` MUST equal the folder name. `description` 120–220 chars, starts with "Use when".
-4. **H1**: `<Name> (desengs) — <one-line essence>`. Right after, a `Source:` line: URL, author, what the source is, license if any.
+4. **H1**: `<Name> — <one-line essence>`. Right after, a `Source:` line: URL, author, what the source is, license if any.
 5. **Required sections** (adapt titles to the category, keep the order):
    - What it is / Why it exists
    - The core ideas (the meat — see rule 7)
@@ -51,14 +51,14 @@ Every skill in this folder distills ONE source listed on https://desengs.com/ in
 
 ## Sibling skills (for Relations sections)
 
-Existing: desengs-domain-fit, desengs-micro-craft, desengs-spectacle, desengs-dynamism, desengs-3d-craft, desengs-aicss, desengs-beautiful-ui, desengs-dot-matrix, desengs-emil-skills, desengs-impeccable, desengs-krehel-skills, desengs-magic-ui, desengs-taste, desengs-thinking-orbs, desengs-transitions, desengs-ui-skills, desengs-web-interface-guidelines, desengs-ui-ux-master.
+Existing: domain-fit, micro-craft, spectacle, dynamism, 3d-craft, aicss, beautiful-ui, dot-matrix, emil-skills, impeccable, krehel-skills, magic-ui, taste, thinking-orbs, transitions, ui-skills, web-interface-guidelines, ui-ux-canon.
 
-Reference canon: desengs-interfaces-dev, desengs-component-gallery, desengs-ui-playbook, desengs-ui-wiki, desengs-laws-of-ux, desengs-principles, desengs-lessons-design, desengs-practical-typography, desengs-ds-checklist, desengs-design-systems-surf, desengs-design-books.
+Reference canon: interfaces-dev, component-gallery, ui-playbook, ui-wiki, laws-of-ux, principles, lessons-design, practical-typography, ds-checklist, design-systems-surf, design-books.
 
-Craft & philosophy: desengs-devouring-details, desengs-interface-craft, desengs-fluid-functionalism, desengs-design-spells, desengs-abtest-design, desengs-oklch, desengs-easing, desengs-svg-guide, desengs-rams, desengs-galleries.
+Craft & philosophy: devouring-details, interface-craft, fluid-functionalism, design-spells, abtest-design, oklch, easing, svg-guide, rams, galleries.
 
-Libraries & effects: desengs-spectacle, desengs-loading-dev, desengs-gradientool, desengs-use-layouts, desengs-corner-radii, desengs-tokens-generator, desengs-bencho, desengs-kugiri, desengs-images-in-motion, desengs-shoogle, desengs-cuelume, desengs-ui-camera, desengs-morphrig, desengs-morphicons, desengs-interior-dev, desengs-liquid-glass, desengs-liquid-gooey, desengs-crd-ui, desengs-dither-kit, desengs-agentation, desengs-number-flow, desengs-audio-kit, desengs-gradient-border, desengs-hashvatar, desengs-remediate, desengs-devl, desengs-ui-land, desengs-torph, desengs-shadowlab, desengs-fancy-components, desengs-dialkit, desengs-calligraph, desengs-floguo, desengs-cmdk, desengs-sonner, desengs-animations-dev, desengs-liveline, desengs-web-haptics, desengs-soundcn.
+Libraries & effects: spectacle, loading-dev, gradientool, use-layouts, corner-radii, tokens-generator, bencho, kugiri, images-in-motion, shoogle, cuelume, ui-camera, morphrig, morphicons, interior-dev, liquid-glass, liquid-gooey, crd-ui, dither-kit, agentation, number-flow, audio-kit, gradient-border, hashvatar, remediate, devl, ui-land, torph, shadowlab, fancy-components, dialkit, calligraph, floguo, cmdk, sonner, animations-dev, liveline, web-haptics, soundcn.
 
-Essays: desengs-code-source-of-truth, desengs-limit-details, desengs-html-can-do-that, desengs-how-i-design-with-ai, desengs-inter-alternatives, desengs-anatomy-ai-input, desengs-calvez-typography, desengs-front-of-front-end, desengs-family-values, desengs-shedsgns-taste, desengs-invisible-details, desengs-you-dont-need-animations, desengs-details-feel-better, desengs-using-ai-as-de, desengs-concept-of-taste, desengs-scaling-intent-artistry, desengs-rise-of-de, desengs-ai-design-engineer-twilson, desengs-become-ai-designer, desengs-design-for-engineers, desengs-de-attributes, desengs-becoming-de, desengs-de-essay, desengs-de-state-of-mind, desengs-de-101, desengs-de-tools, desengs-de-jobs, desengs-design-engineers-map.
+Essays: code-source-of-truth, limit-details, html-can-do-that, how-i-design-with-ai, inter-alternatives, anatomy-ai-input, calvez-typography, front-of-front-end, family-values, shedsgns-taste, invisible-details, you-dont-need-animations, details-feel-better, using-ai-as-de, concept-of-taste, scaling-intent-artistry, rise-of-de, ai-design-engineer-twilson, become-ai-designer, design-for-engineers, de-attributes, becoming-de, de-essay, de-state-of-mind, de-101, de-tools, de-jobs, design-engineers-map.
 
-Portfolios: desengs-rauno, desengs-jakub-kr.
+Portfolios: rauno, jakub-kr.

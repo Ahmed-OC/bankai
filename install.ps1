@@ -1,4 +1,4 @@
-# desengs-skills installer (Windows) — copies the canon next to your agent's other skills.
+# ui-ux-canon installer (Windows) — copies the canon next to your agent's other skills.
 # Usage: powershell -File install.ps1 [-Target <dir>]
 param(
   [string]$Target = ""

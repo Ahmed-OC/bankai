@@ -1,11 +1,11 @@
-# desengs — the UI/UX canon for AI agents
+# ui-ux-canon
 
 **107 skills that make coding agents design interfaces which don't look generated.**
 
-One master skill routes to 106 children distilled from the work of the best design engineers — Rauno Freiberg, Emil Kowalski, Jakub Krehel, Paco Coursey, Brad Frost, Butterick, and ~60 more (the [desengs.com](https://desengs.com/) curation) — plus rules hardened over 40+ A/B evals where independent agents built the same brief with and without the canon.
+One master skill (`ui-ux-canon`) routes to 106 children distilled from the work of the best design engineers — Rauno Freiberg, Emil Kowalski, Jakub Krehel, Paco Coursey, Brad Frost, Butterick, and ~60 more — plus rules hardened over 40+ A/B evals where independent agents built the same brief with and without the canon.
 
 ```
-same brief, independent agents      plain    with desengs
+same brief, independent agents      plain    with the canon
 ─────────────────────────────────  ───────  ───────────
 artisan landing (worst offender)      76          85
 keyboard configurator                 77          86
@@ -18,19 +18,19 @@ cycling platform (new domain)         67          85
 Works with any agent that supports the Agent Skills convention (ZCode, Claude Code, Codex, Cursor, opencode, Amp…):
 
 ```bash
-npx skills@latest add Ahmed-OC/desengs-skills
+npx skills@latest add Ahmed-OC/ui-ux-canon
 ```
 
-Pick **`desengs-ui-ux-master`** (the entry point — it discovers and routes to the children), or take everything.
+Pick **`ui-ux-canon`** (the entry point — it discovers and routes to the children), or take everything.
 
 <details>
 <summary>Other methods</summary>
 
 ```bash
 # git clone + script (copies skills/ into your agent's skills directory)
-git clone https://github.com/Ahmed-OC/desengs-skills.git
-cd desengs-skills && ./install.sh            # macOS/Linux
-# or:  powershell -File install.ps1           # Windows
+git clone https://github.com/Ahmed-OC/ui-ux-canon.git
+cd ui-ux-canon && ./install.sh            # macOS/Linux
+# or:  powershell -File install.ps1       # Windows
 # or manually: copy skills/* next to your other skills
 ```
 
@@ -39,21 +39,21 @@ The script auto-detects `.agents/skills`, `.claude/skills`, `.codex/skills`, `.c
 
 ## How it works
 
-You don't read 107 files. **Open `desengs-ui-ux-master` at the start of any UI work** — it carries the shared doctrine and routes you to the 3-5 children your brief actually needs:
+You don't read 107 files. **Open `ui-ux-canon` at the start of any UI work** — it carries the shared doctrine and routes you to the 3-5 children your brief actually needs:
 
 - **The Differentiation Engine** — pick a product mode (Operate / Create / Consume / Entice / Play), set five dials explicitly (VARIANCE, MOTION, DENSITY, ORNAMENT, WARMTH), write a one-line design intent. Ban your first *two* concepts — the domain's obvious metaphor is the slop.
 - **Exact numbers, not vibes** — motion bands in ms, state-layer lightness deltas, contrast ratios to annotate, touch targets, stagger caps, easing families.
 - **Rulings for conflicts** — R1 "should this animate?" (default: no), R8 "briefs are floors" (unrequested depth is mandatory), R9 "interaction floor" (undo, keyboard, honest states everywhere).
 - **The anti-slop ban list + mechanical pass** — 15 generated-work tells, closed by literal grep commands you run on your own output before shipping. A box checked without a command output is `UNVERIFIED`, never `PASS`.
 
-Flagship children: `desengs-spectacle` (signature law, arrival choreography), `desengs-domain-fit` (14-domain matrix), `desengs-micro-craft` (exact finishing formulas), `desengs-dynamism` (L0-L6 ladder, at-rest life that is TRUE or LABELED), `desengs-3d-craft` (3D interaction contract), `desengs-oklch`, `desengs-practical-typography`, `desengs-cmdk`, `desengs-sonner`, `desengs-rauno`… Full routing table lives in the master.
+Flagship children: `spectacle` (signature law, arrival choreography), `domain-fit` (14-domain matrix), `micro-craft` (exact finishing formulas), `dynamism` (L0-L6 ladder, at-rest life that is TRUE or LABELED), `3d-craft` (3D interaction contract), `oklch`, `practical-typography`, `cmdk`, `sonner`, `rauno`… Full routing table lives in the master.
 
 ## What's inside
 
 ```
 skills/
-  desengs-ui-ux-master/   the canon — start here
-  desengs-<name>/         106 children (one per curated source)
+  ui-ux-canon/            the canon — start here
+  <name>/                 106 children (one per curated source)
   _CONVENTIONS.md         binding format for every skill
 ```
 
