@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bankai installer — copies the canon next to your agent's other skills.
+# bankai installer — copies the canon (master + children) next to your agent's other skills.
 # Two ways to run it:
 #   1) from a clone:      ./install.sh [target-dir]
 #   2) one-liner (no git, no node — only curl + tar):
@@ -8,14 +8,14 @@ set -euo pipefail
 REPO="Ahmed-OC/bankai"
 BRANCH="main"
 
-if [ -n "${BASH_SOURCE[0]:-}" ] && [ -f "$(dirname "${BASH_SOURCE[0]}")/skills/bankai/SKILL.md" ]; then
-  SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/skills"
+if [ -n "${BASH_SOURCE[0]:-}" ] && [ -f "$(dirname "${BASH_SOURCE[0]}")/bankai/SKILL.md" ]; then
+  ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 else
   TMP="$(mktemp -d)"
   trap 'rm -rf "$TMP"' EXIT
   echo "Downloading bankai…"
   curl -fsSL "https://github.com/$REPO/archive/refs/heads/$BRANCH.tar.gz" | tar -xz -C "$TMP"
-  SRC="$TMP/bankai-$BRANCH/skills"
+  ROOT="$TMP/bankai-$BRANCH"
 fi
 
 if [ -n "${1:-}" ]; then
@@ -35,12 +35,14 @@ fi
 
 mkdir -p "$TARGET"
 COUNT=0
-for DIR in "$SRC"/*/; do
-  NAME="$(basename "$DIR")"
+install_one() {  # $1 = source dir
+  local NAME; NAME="$(basename "$1")"
   rm -rf "$TARGET/$NAME"
-  cp -r "$DIR" "$TARGET/$NAME"
+  cp -r "$1" "$TARGET/$NAME"
   COUNT=$((COUNT+1))
-done
-cp "$SRC/_CONVENTIONS.md" "$TARGET/" 2>/dev/null || true
+}
+install_one "$ROOT/bankai"                       # the entry point
+for DIR in "$ROOT"/skills/*/; do install_one "$DIR"; done   # the children
+cp "$ROOT/skills/_CONVENTIONS.md" "$TARGET/" 2>/dev/null || true
 echo "Installed $COUNT skills into: $TARGET"
 echo "Start with: bankai (it routes to the children automatically)."

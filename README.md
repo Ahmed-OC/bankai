@@ -64,11 +64,12 @@ Flagship children: `spectacle` (signature law, arrival choreography), `domain-fi
 ## What's inside
 
 ```
-skills/
-  bankai/                the canon — start here
-  <name>/                106 children (one per curated source)
-  _CONVENTIONS.md        binding format for every skill
+bankai/                THE ENTRY POINT — the canon, open this one
+skills/<name>/         the 106 children (one per curated source)
+skills/_CONVENTIONS.md binding format for every skill
 ```
+
+Once installed, everything flattens into sibling folders in your skills directory — your agent discovers `bankai` as the entry point and it routes to the children on demand.
 
 Every child carries a `source:` link in its frontmatter — this is a research distillation of publicly published material, crediting the original authors. All credit for the underlying ideas belongs to them; the canon's contribution is the routing, the rulings, and the eval-hardened rules. If you're an author and want something corrected or removed, please open an issue.
 

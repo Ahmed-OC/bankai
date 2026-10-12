@@ -1,8 +1,9 @@
-# bankai installer (Windows) — copies the canon next to your agent's other skills.
+# bankai installer (Windows) — copies the canon (master + children) next to your agent's other skills.
 # Two ways to run it:
 #   1) from a clone:   powershell -File install.ps1 [-Target <dir>]
 #   2) one-liner (no git, no node):
-#      powershell -Command "irm https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.ps1 | iex"  [-Target as env var BANKAI_TARGET]
+#      powershell -Command "irm https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.ps1 | iex"
+#      (optional: set $env:BANKAI_TARGET first to choose the destination)
 param(
   [string]$Target = ""
 )
@@ -10,17 +11,16 @@ $ErrorActionPreference = "Stop"
 $Repo = "Ahmed-OC/bankai"
 $Branch = "main"
 
-# Resolve skills source: local clone if available, otherwise download the zip
-$localSkills = if ($PSScriptRoot) { Join-Path $PSScriptRoot "skills" } else { "" }
-if ($localSkills -and (Test-Path (Join-Path $localSkills "bankai/SKILL.md"))) {
-  $Src = $localSkills
+# Resolve repo root: local clone if available, otherwise download the zip
+if ($PSScriptRoot -and (Test-Path (Join-Path $PSScriptRoot "bankai/SKILL.md"))) {
+  $Root = $PSScriptRoot
 } else {
   Write-Host "Downloading bankai..."
   $tmp = New-Item -ItemType Directory -Force -Path (Join-Path $env:TEMP "bankai-install-$(Get-Random)")
   $zip = Join-Path $tmp "bankai.zip"
   Invoke-WebRequest -Uri "https://github.com/$Repo/archive/refs/heads/$Branch.zip" -OutFile $zip -UseBasicParsing
   Expand-Archive -Path $zip -DestinationPath $tmp -Force
-  $Src = Join-Path $tmp "bankai-$Branch/skills"
+  $Root = Join-Path $tmp "bankai-$Branch"
 }
 
 if (-not $Target) { $Target = $env:BANKAI_TARGET }
@@ -42,13 +42,15 @@ if (-not $Target) {
 
 New-Item -ItemType Directory -Force -Path $Target | Out-Null
 $count = 0
-Get-ChildItem -Directory $Src | ForEach-Object {
-  $dest = Join-Path $Target $_.Name
+function Install-One([string]$srcDir) {
+  $dest = Join-Path $Script:Target (Split-Path $srcDir -Leaf)
   if (Test-Path $dest) { Remove-Item -Recurse -Force $dest }
-  Copy-Item -Recurse $_.FullName $dest
-  $count++
+  Copy-Item -Recurse $srcDir $dest
+  $Script:count++
 }
-$conventions = Join-Path $Src "_CONVENTIONS.md"
+Install-One (Join-Path $Root "bankai")                          # the entry point
+Get-ChildItem -Directory (Join-Path $Root "skills") | ForEach-Object { Install-One $_.FullName }  # the children
+$conventions = Join-Path $Root "skills/_CONVENTIONS.md"
 if (Test-Path $conventions) { Copy-Item $conventions $Target -Force }
 Write-Host "Installed $count skills into: $Target"
 Write-Host "Start with: bankai (it routes to the children automatically)."
