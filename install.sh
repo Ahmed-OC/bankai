@@ -1,9 +1,22 @@
 #!/usr/bin/env bash
 # bankai installer — copies the canon next to your agent's other skills.
-# Usage: ./install.sh [target-dir]
+# Two ways to run it:
+#   1) from a clone:      ./install.sh [target-dir]
+#   2) one-liner (no git, no node — only curl + tar):
+#      curl -fsSL https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.sh | bash [target-dir]
 set -euo pipefail
-HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SRC="$HERE/skills"
+REPO="Ahmed-OC/bankai"
+BRANCH="main"
+
+if [ -n "${BASH_SOURCE[0]:-}" ] && [ -f "$(dirname "${BASH_SOURCE[0]}")/skills/bankai/SKILL.md" ]; then
+  SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/skills"
+else
+  TMP="$(mktemp -d)"
+  trap 'rm -rf "$TMP"' EXIT
+  echo "Downloading bankai…"
+  curl -fsSL "https://github.com/$REPO/archive/refs/heads/$BRANCH.tar.gz" | tar -xz -C "$TMP"
+  SRC="$TMP/bankai-$BRANCH/skills"
+fi
 
 if [ -n "${1:-}" ]; then
   TARGET="$1"
@@ -15,7 +28,7 @@ else
   done
   if [ -z "${TARGET:-}" ]; then
     echo "No skills directory found (.agents/skills, .claude/skills, …)."
-    echo "Create one (mkdir -p .agents/skills) or pass a target: ./install.sh <dir>"
+    echo "Create one (mkdir -p .agents/skills) or pass a target: install.sh <dir>"
     exit 1
   fi
 fi
@@ -30,4 +43,4 @@ for DIR in "$SRC"/*/; do
 done
 cp "$SRC/_CONVENTIONS.md" "$TARGET/" 2>/dev/null || true
 echo "Installed $COUNT skills into: $TARGET"
-echo "Start with: desengs-ui-ux-master (it routes to the children automatically)."
+echo "Start with: bankai (it routes to the children automatically)."

@@ -15,26 +15,39 @@ cycling platform (new domain)         67          85
 
 ## Install
 
-Works with any agent that supports the Agent Skills convention (ZCode, Claude Code, Codex, Cursor, opencode, Amp…):
+The skills are plain markdown your agent reads — no runtime, no dependencies. Works with any agent that supports the Agent Skills convention (ZCode, Claude Code, Codex, Cursor, opencode, Amp…).
 
+**macOS / Linux** (needs only curl, preinstalled everywhere):
 ```bash
-npx skills@latest add Ahmed-OC/bankai
+curl -fsSL https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.sh | bash
 ```
 
-Pick **`bankai`** (the entry point — it discovers and routes to the children), or take everything.
+**Windows PowerShell:**
+```powershell
+powershell -Command "irm https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.ps1 | iex"
+```
+
+The installer auto-detects your skills directory (`.agents/skills`, `.claude/skills`, `.codex/skills`, `.cursor/skills` — project-level first, then home). To choose a destination explicitly:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.sh | bash -s -- path/to/skills-dir
+# Windows: set $env:BANKAI_TARGET = "path" first, then run the one-liner above
+```
 
 <details>
 <summary>Other methods</summary>
 
 ```bash
-# git clone + script (copies skills/ into your agent's skills directory)
+# npx skills CLI (requires Node 22+) — the ecosystem-standard installer:
+npx skills@latest add Ahmed-OC/bankai        # pick "bankai" (the entry point) or take everything
+
+# git clone + script
 git clone https://github.com/Ahmed-OC/bankai.git
 cd bankai && ./install.sh            # macOS/Linux
 # or:  powershell -File install.ps1   # Windows
+
 # or manually: copy skills/* next to your other skills
 ```
-
-The script auto-detects `.agents/skills`, `.claude/skills`, `.codex/skills`, `.cursor/skills` (project-level first, then home) or takes a target directory as an argument.
 </details>
 
 ## How it works
