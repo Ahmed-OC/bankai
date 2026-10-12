@@ -148,4 +148,4 @@ Generated UIs commit these constantly: straight quotes and dumb apostrophes past
 - **calvez-typography** — another typography essay; adds a designer's expressive intent where Butterick is strictly rule-based — read it after this, not instead.
 - **web-interface-guidelines** — covers the interaction half of text (touch targets, truncation, i18n, contrast numbers) that this skill deliberately does not.
 - **oklch** — the color-side counterpart: this skill fixes measure and rhythm, OKLCH fixes the text/contrast values.
-- **ui-ux-canon** — the canon root that dispatches to this skill whenever rendered text needs setting.
+- **bankai** — the canon root that dispatches to this skill whenever rendered text needs setting.

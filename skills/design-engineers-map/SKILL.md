@@ -160,4 +160,4 @@ Do NOT use when:
 - `emil-skills` — roster member #8's component and state-transition techniques in executable form; the applied counterpart to his entry above.
 - `rise-of-de` — the historical/market narrative of the discipline's emergence; this map supplies the people, that skill supplies the timeline.
 - `de-attributes` — a competency-by-competency attribute list for the role; pairs with this skill's eight-point implied curriculum.
-- `ui-ux-canon` — the umbrella canon this map feeds; consult it to route from a person to the specific technique skills in the canon.
+- `bankai` — the umbrella canon this map feeds; consult it to route from a person to the specific technique skills in the canon.

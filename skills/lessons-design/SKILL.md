@@ -149,5 +149,5 @@ Classic AI misapplications of this source: (1) epigraph-slop — bolting the Fuk
 - web-interface-guidelines — supplies the hard numbers (contrast, targets, motion budgets) this source deliberately omits; run both, numbers first.
 - taste — a theory of how taste forms; complements these maxims with the mechanism behind them.
 - impeccable — operationalizes chapter 4's proofread list into a shipping-gate checklist.
-- ui-ux-canon — the umbrella canon; this skill is its judgment/tie-breaker layer.
+- bankai — the umbrella canon; this skill is its judgment/tie-breaker layer.
 - principles — principle-taxonomy sites for cross-checking; where they genericize, this source's chaptered imperatives and specific frames (third idea, 95 repetitions, 90% shortening) take precedence.

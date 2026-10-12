@@ -187,4 +187,4 @@ Typical AI misuse of this canon: name-dropping without applying — "as Tufte sa
 - **practical-typography** — operationalizes Bringhurst, Ruder, and Lupton for the web with exact CSS-grade values (measure, leading 120–145%), which the books state in print terms.
 - **principles** — the principles canon pairs with Pereyra's *Universal Principles of UX* entry; use it for the principle taxonomy, this skill for the source and author.
 - **rams** — the ten principles behind the *Less and More* / *Complete Works* entries, expanded into interface terms.
-- **ui-ux-canon** — the canon index; routes here whenever a decision needs a citable authority rather than a mechanism.
+- **bankai** — the canon index; routes here whenever a decision needs a citable authority rather than a mechanism.

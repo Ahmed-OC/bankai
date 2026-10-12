@@ -1,11 +1,11 @@
 ---
-name: ui-ux-canon
+name: bankai
 description: Use at the start of ANY UI/frontend work — new products, screens, restyling, design systems, components, motion, polish, or reviews. Master entry point of the 106-skill canon (a curated design-engineering reading list, distilled): product modes, variance dials, shared values with exact numbers, conflict rulings, routing to child skills, and the anti-slop delivery gate.
-source: https://github.com/Ahmed-OC/ui-ux-canon
+source: https://github.com/Ahmed-OC/bankai
 category: reference
 ---
 
-# ui-ux-canon — the canon for interfaces that don't look generated
+# bankai — the canon for interfaces that don't look generated
 
 106 child skills sitting as SIBLING FOLDERS next to this skill's folder (i.e. in the same `skills/` directory: `skills/<name>/SKILL.md`), one per curated link (authors: Rauno Freiberg, Emil Kowalski, Jakub Krehel, Paco Coursey, Raphael Salaja, Josh Puckett, Maggie Appleton, Brad Frost, Butterick, and ~60 more), plus `spectacle`, `domain-fit`, `micro-craft`, `dynamism`, `3d-craft` (synthesized from research and eval cycles). This file is the only one you open by default; it carries the shared doctrine and routes you to a child only when a problem needs that child's depth. `_CONVENTIONS.md` (same skills directory) is the binding format for every child (read it before writing or updating one).
 

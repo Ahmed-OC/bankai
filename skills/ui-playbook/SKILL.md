@@ -180,7 +180,7 @@ AI's typical failures against this playbook: building a custom dropdown/select/p
 
 ## Relations
 
-- **ui-ux-canon** — the canon index; route here first, then load this skill when a specific pattern is being picked or built.
+- **bankai** — the canon index; route here first, then load this skill when a specific pattern is being picked or built.
 - **web-interface-guidelines** — complementary HTML/CSS craft rules (this playbook supplies the per-component behavior contract; that skill supplies markup/styling hygiene).
 - **laws-of-ux** — the perception psychology (Doherty threshold, goal gradient) that explains *why* these timings (100ms, 4s) work.
 - **sonner** — a production toast library; it operationalizes this playbook's Notification rules (stacking, pause-on-hover) — check it against the numbers above.

@@ -151,7 +151,7 @@ Typical AI failures this taxonomy exposes: building a select where a dropdown me
 
 ## Relations
 
-- **ui-ux-canon** — the canon index; routes component-building work here for taxonomy and anatomy, then to specialized siblings for polish.
+- **bankai** — the canon index; routes component-building work here for taxonomy and anatomy, then to specialized siblings for polish.
 - **web-interface-guidelines** — adds the cross-cutting interaction rules (timing, motion, focus behavior) that per-component anatomy here doesn't cover.
 - **html-can-do-that** — extends the native-first mechanism: the `details/summary`, `<dialog>`, and popover-attribute primitives this catalogue's best examples reduce to.
 - **ds-checklist** — system-level requirements (tokens, docs, governance, adoption) beyond a single component's anatomy.

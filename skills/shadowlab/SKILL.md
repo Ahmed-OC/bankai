@@ -180,4 +180,4 @@ The tell-tale AI shadow is `box-shadow: 0 4px 8px rgba(0,0,0,.1)` — single lay
 - **tokens-generator** — turn the e1–e5 recipes into theme variables with dark-mode variants.
 - **web-interface-guidelines** — broader elevation/z-index doctrine; this skill supplies the exact layer values.
 - **taste** — when shadow "polish" is craft vs. decoration stacked on decoration.
-- **ui-ux-canon** — canon index; elevation scale feeds its depth chapter.
+- **bankai** — canon index; elevation scale feeds its depth chapter.

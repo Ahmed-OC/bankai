@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ui-ux-canon installer — copies the canon next to your agent's other skills.
+# bankai installer — copies the canon next to your agent's other skills.
 # Usage: ./install.sh [target-dir]
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

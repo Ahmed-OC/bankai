@@ -145,7 +145,7 @@ Do NOT use when:
 
 ## Relations
 
-- `ui-ux-canon` — umbrella canon; routes tie-break decisions between two variants here for the evidence-backed default.
+- `bankai` — umbrella canon; routes tie-break decisions between two variants here for the evidence-backed default.
 - `laws-of-ux` — supplies the perceptual machinery behind these verdicts (loss aversion = reminders and payramp framing; Von Restorff = thin-bordered CTA beating system-consistent B; goal gradient = checklist and referral progress). This skill contributes the empirical outcomes; that one the explanations.
 - `ui-playbook` — broader rule catalog without evidence weights; use it for rules this corpus never tested (spacing, hierarchy) and prefer this skill's numbers when both cover the same choice.
 - `taste` — the fallback when no test data exists; keeps the instinct honest that Paktor's team (and any untested icon metaphor) demonstrably lacked.

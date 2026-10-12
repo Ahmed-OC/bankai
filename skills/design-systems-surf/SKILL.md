@@ -159,4 +159,4 @@ The failure mode this source names directly: an AI given a half-documented syste
 - **ds-checklist** — complements this skill with the audit-side checklist; this skill supplies the structural taxonomy and named exemplars.
 - **code-source-of-truth** — argues code is the single source of truth; this skill's trust model tempers that: code owns runtime behavior, but usage authority belongs to docs and status records.
 - **tokens-generator** — the tooling counterpart to idea 6: generates the token layer whose semantic roles must be documented by purpose, per the guess-zone fixes here.
-- **ui-ux-canon** — the umbrella canon that dispatches to this skill whenever the task is system architecture rather than single-screen craft.
+- **bankai** — the umbrella canon that dispatches to this skill whenever the task is system architecture rather than single-screen craft.

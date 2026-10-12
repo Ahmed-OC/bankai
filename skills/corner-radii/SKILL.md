@@ -157,4 +157,4 @@ The canonical AI failure is exactly what this tool fixes: every box gets the sam
 - **devouring-details** — same craft category as the concentric rule: optical micro-corrections (like optical alignment of icons) that separate adequate from deliberate UI.
 - **web-interface-guidelines** — supplies the spacing/sizing grammar (4px base grid) the 4px radius scale assumes; apply together.
 - **ds-checklist** — adds the audit step: nested-radius derivation belongs in any design-system review checklist.
-- **ui-ux-canon** — the umbrella canon; this skill is its radius-system leaf: radii as a derived system, never isolated pixels.
+- **bankai** — the umbrella canon; this skill is its radius-system leaf: radii as a derived system, never isolated pixels.

@@ -181,4 +181,4 @@ Do NOT use for: component-pattern naming (toast vs snackbar, tooltip vs popover 
 - **easing** — deep dive on the curve vocabulary this wiki compresses into four rules (entrance/exit/transition/linear); adds the curve math the wiki omits.
 - **ui-skills** — ibelick's polish baseline overlaps on typography and motion but is stricter ("never add animation unless requested"); where they conflict, that skill governs *whether* to animate, this one governs *how* once animation is justified.
 - **number-flow** — animated number transitions; pair its rolling digits with `tabular-nums` so columns stay aligned mid-animation.
-- **ui-ux-canon** — canon index that routes here when a task needs exact values or correct UI-mechanics vocabulary.
+- **bankai** — canon index that routes here when a task needs exact values or correct UI-mechanics vocabulary.

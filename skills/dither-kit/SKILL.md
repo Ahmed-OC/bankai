@@ -165,4 +165,4 @@ Dither has become a terminal-core cliché (2024–26): green-monochrome, CRT-glo
 - **gradientool** — smooth-gradient craft; dithering is the counter-move when gradients band or feel generic — read both before choosing.
 - **images-in-motion** — image treatment/animation effects; its rules for static-image processing pair with FS dithering for poster-style hero media.
 - **web-interface-guidelines** — the a11y guardrails (contrast, reduced-motion) that dithered surfaces must not violate; the 0.4 off-tier exists to preserve perceived contrast.
-- **ui-ux-canon** — canon index that dispatches to this skill when a dithered or pixel-textured surface is requested.
+- **bankai** — canon index that dispatches to this skill when a dithered or pixel-textured surface is requested.

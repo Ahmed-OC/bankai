@@ -156,4 +156,4 @@ When writing a DE job spec, mirror the listings' structure: two-sentence mission
 - **rise-of-de** — David Hoang's "emerging role in software" essay (also Further Reading here): the industry-trend framing behind why this board exists.
 - **front-of-front-end** — the engineering-side definition of the same boundary this board monetizes; use it for the code-depth half of the profile.
 - **taste** — supplies the training program for the "craft and taste" requirement every listing above demands; this skill only defines the bar.
-- **ui-ux-canon** — the umbrella canon; consult it for the technique skills (motion, systems, typography) itemized in the profile above.
+- **bankai** — the umbrella canon; consult it for the technique skills (motion, systems, typography) itemized in the profile above.

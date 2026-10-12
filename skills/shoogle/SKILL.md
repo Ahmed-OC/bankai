@@ -148,4 +148,4 @@ Do NOT use when:
 - **component-gallery** — curated human galleries vs Shoogle's exhaustive machine index: use galleries for taste, Shoogle for coverage; they contradict on ranking philosophy (curation vs sponsor-influenced relevance).
 - **loading-dev** — the niche single-concept registry pattern; exactly when `search_registry_items_scoped(query=..., registries=["loading-dev"])` beats open search.
 - **cmdk** — a single-component registry item (command palette); illustrates that one result row is worth a whole skill — depth after discovery.
-- **ui-ux-canon** — the canon that decides whether to search-and-vendor at all or hand-craft per its principles; consult it before any `add`.
+- **bankai** — the canon that decides whether to search-and-vendor at all or hand-craft per its principles; consult it before any `add`.

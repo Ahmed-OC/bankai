@@ -153,5 +153,5 @@ How AI typically misapplies this skill — check your output for each:
 - **rams** — full treatment of the Ten Principles for Good Design; this skill cites set #10 as a form, that one applies the whole set to product UI.
 - **laws-of-ux** — cognitive laws (Fitts, Hick, Miller) are discovered constraints, not authored statements; use laws to *predict* and principles to *decide*. Complementary tie-break layers, different epistemic status.
 - **web-interface-guidelines** — the rules/guideline layer *below* principles (exact spacing, type, contrast numbers); principles justify exceptions to it, guidelines instantiate it.
-- **ui-ux-canon** — the canon index; loads this skill when a project's principles are missing, decorative, or exceed 5 entries.
+- **bankai** — the canon index; loads this skill when a project's principles are missing, decorative, or exceed 5 entries.
 - **taste** — judgement for the cases no principle covers; principles are codified taste, taste is the uncoded remainder. Contradiction to hold: a good set leaves gaps *because* taste handles them.

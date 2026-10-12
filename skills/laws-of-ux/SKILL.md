@@ -153,7 +153,7 @@ AI misapplies these laws in predictable ways: it hard-caps nav at 7 items citing
 
 ## Relations
 
-- **ui-ux-canon** — the canon index; routes here whenever a behavior decision (timing, counts, sizing, emphasis) is on the table.
+- **bankai** — the canon index; routes here whenever a behavior decision (timing, counts, sizing, emphasis) is on the table.
 - **web-interface-guidelines** — supplies the concrete pixel/spacing/typography values these laws leave unspecified (Fitts sizing floors, proximity spacing rhythm).
 - **transitions** — the motion mechanisms that implement Doherty's perceived-performance and Flow's action-feedback takeaways without becoming slop.
 - **taste** — decides form where this skill decides behavior; Aesthetic-Usability is the documented interaction point: taste changes perceived usability even when actual usability is unchanged.

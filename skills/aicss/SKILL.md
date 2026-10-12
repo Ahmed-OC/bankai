@@ -271,4 +271,4 @@ The shimmering "Thinking…" label and the tool-call checklist are becoming the 
 - **loading-dev** — the broader loading/skeleton vocabulary; AICSS narrows it to named agent phases. Use loading-dev for generic data-fetching states, this skill when the "loader" is an AI action with inputs and artifacts.
 - **transitions** — supplies the motion grammar behind the durations and easings used here (140–400 ms, `cubic-bezier(0.4, 0, 0.2, 1)`, staggered `transition-delay`); consult it before inventing new timings.
 - **agentation** — sibling agent-UI library; overlaps on agent conversation surfaces and streaming input. Compare inventories before building; prefer the component you can own and trim.
-- **ui-ux-canon** — the canon index that routes to this skill; re-read it when combining several canon skills on one surface.
+- **bankai** — the canon index that routes to this skill; re-read it when combining several canon skills on one surface.

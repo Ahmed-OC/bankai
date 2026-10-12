@@ -189,6 +189,6 @@ How AI typically misapplies this doctrine:
 
 - **taste** — defines what "distinct and beautiful" actually means; Impeccable demands commitment, taste supplies the judgment.
 - **web-interface-guidelines** — the reference depth behind this floor: interaction, accessibility, and input rules Impeccable only summarizes.
-- **ui-ux-canon** — the canon index that routes UI work here; consult it to see which sibling applies to a given surface.
+- **bankai** — the canon index that routes UI work here; consult it to see which sibling applies to a given surface.
 
 Doctrine in one line: *"When torn between refined and committed, commit."*

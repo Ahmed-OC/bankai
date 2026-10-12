@@ -61,4 +61,4 @@ The meta-failure this skill exists to kill: applying one house style (or the can
 
 ## Relations
 
-`ui-ux-canon` (§1 dials receive this skill's output), `spectacle` (variance spending for Entice/Play), `taste` (ban list), `galleries` (reference classes), `impeccable` (mode system this extends).
+`bankai` (§1 dials receive this skill's output), `spectacle` (variance spending for Entice/Play), `taste` (ban list), `galleries` (reference classes), `impeccable` (mode system this extends).

@@ -158,4 +158,4 @@ AI agents fail this checklist in predictable ways:
 - `web-interface-guidelines` — deeper per-element UI rules that expand several archetype checks (spacing, touch targets, states) beyond yes/no.
 - `design-systems-surf` — live design systems to study for the reference link each checklist item demands; use it to benchmark answers.
 - `oklch` — how to construct the color palette that passes this checklist's AA and dark-mode questions.
-- `ui-ux-canon` — the canon index that dispatches to this skill when a design-system audit is requested.
+- `bankai` — the canon index that dispatches to this skill when a design-system audit is requested.

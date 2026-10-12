@@ -1,6 +1,6 @@
 # _CONVENTIONS.md — binding rules for every * skill
 
-Every skill in this folder distills ONE curated source into a self-contained, stack-neutral design-engineering skill. Together they form the canon referenced by `ui-ux-canon`. Read this file fully before writing a skill.
+Every skill in this folder distills ONE curated source into a self-contained, stack-neutral design-engineering skill. Together they form the canon referenced by `bankai`. Read this file fully before writing a skill.
 
 ## Hard rules
 
@@ -51,7 +51,7 @@ Every skill in this folder distills ONE curated source into a self-contained, st
 
 ## Sibling skills (for Relations sections)
 
-Existing: domain-fit, micro-craft, spectacle, dynamism, 3d-craft, aicss, beautiful-ui, dot-matrix, emil-skills, impeccable, krehel-skills, magic-ui, taste, thinking-orbs, transitions, ui-skills, web-interface-guidelines, ui-ux-canon.
+Existing: domain-fit, micro-craft, spectacle, dynamism, 3d-craft, aicss, beautiful-ui, dot-matrix, emil-skills, impeccable, krehel-skills, magic-ui, taste, thinking-orbs, transitions, ui-skills, web-interface-guidelines, bankai.
 
 Reference canon: interfaces-dev, component-gallery, ui-playbook, ui-wiki, laws-of-ux, principles, lessons-design, practical-typography, ds-checklist, design-systems-surf, design-books.
 

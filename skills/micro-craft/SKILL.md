@@ -81,4 +81,4 @@ Micro-craft inverted: arbitrary durations (240ms, 170ms) instead of tiers; pure-
 
 ## Relations
 
-`krehel-skills` and `web-interface-guidelines` (the rule systems this consolidates with exact formulas), `details-feel-better` (the per-element feel list), `devouring-details` (prototype-level depth), `impeccable` (bounded verification of this pass), `ui-ux-canon` (§5 step 7 and §8 gate).
+`krehel-skills` and `web-interface-guidelines` (the rule systems this consolidates with exact formulas), `details-feel-better` (the per-element feel list), `devouring-details` (prototype-level depth), `impeccable` (bounded verification of this pass), `bankai` (§5 step 7 and §8 gate).

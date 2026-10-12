@@ -163,4 +163,4 @@ AI misapplies this canon in three ways: (1) applying *all* the motion vocabulary
 - **oklch** — goes deeper on the OKLCH color model this site leans on for gradient interpolation and dark palettes.
 - **transitions** — complements the animation section with transition/exit choreography beyond the interruptibility rule stated here.
 - **web-interface-guidelines** — an adjacent reference; where the two disagree, prefer this site's exact numbers (it is the more prescriptive of the two).
-- **ui-ux-canon** — the canon root; load this skill as its pattern-shape reference arm.
+- **bankai** — the canon root; load this skill as its pattern-shape reference arm.

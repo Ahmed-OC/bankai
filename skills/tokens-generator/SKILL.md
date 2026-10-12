@@ -169,4 +169,4 @@ Tool-flavored slop: generating only colors and calling it a token set (no spacin
 - **oklch** — the ramp math behind §6.2: L-clamped even distribution plus per-step chroma percentages makes generated ramps perceptually even, not just numerically even; also the `oklch()` output setting used well.
 - **aicss** — conventions for AI-authored CSS; the generator's agent-rules export ("semantic tokens first", "no raw hex") is a concrete instance of that discipline.
 - **ds-checklist** — design-system audits; use it to verify the emitted set (slot coverage, consumption, dark parity) after generation.
-- **ui-ux-canon** — the canon this skill belongs to; token generation is step one of its build flow, everything downstream consumes these slots.
+- **bankai** — the canon this skill belongs to; token generation is step one of its build flow, everything downstream consumes these slots.
