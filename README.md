@@ -15,9 +15,14 @@ cycling platform (new domain)         67          85
 
 ## Install
 
-The skills are plain markdown your agent reads — no runtime, no dependencies. Works with any agent that supports the Agent Skills convention (ZCode, Claude Code, Codex, Cursor, opencode, Amp…).
+The skills are plain markdown your agent reads — no runtime, no dependencies. One skill, `bankai`, appears in your agent; its 106 sub-skills travel inside it and load on demand.
 
-**macOS / Linux** (needs only curl, preinstalled everywhere):
+**npx (any Node ≥ 14 — no Node 22 needed, works with ZCode, Claude Code, Codex, Cursor, opencode…):**
+```bash
+npx github:Ahmed-OC/bankai
+```
+
+**macOS / Linux one-liner (needs only curl):**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.sh | bash
 ```
@@ -30,7 +35,8 @@ powershell -Command "irm https://raw.githubusercontent.com/Ahmed-OC/bankai/main/
 The installer auto-detects your skills directory (`.agents/skills`, `.claude/skills`, `.codex/skills`, `.cursor/skills` — project-level first, then home). To choose a destination explicitly:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.sh | bash -s -- path/to/skills-dir
+npx github:Ahmed-OC/bankai path/to/skills-dir
+# or:  curl -fsSL …/install.sh | bash -s -- path/to/skills-dir
 # Windows: set $env:BANKAI_TARGET = "path" first, then run the one-liner above
 ```
 
@@ -39,14 +45,15 @@ curl -fsSL https://raw.githubusercontent.com/Ahmed-OC/bankai/main/install.sh | b
 
 ```bash
 # npx skills CLI (requires Node 22+) — the ecosystem-standard installer:
-npx skills@latest add Ahmed-OC/bankai        # pick "bankai" (the entry point) or take everything
+npx skills@latest add Ahmed-OC/bankai        # only "bankai" is listed; the children travel inside
 
 # git clone + script
 git clone https://github.com/Ahmed-OC/bankai.git
-cd bankai && ./install.sh            # macOS/Linux
-# or:  powershell -File install.ps1   # Windows
+cd bankai && ./install.sh                    # macOS/Linux
+# or:  powershell -File install.ps1           # Windows
+# or:  node bin/install.js                    # any Node ≥ 14
 
-# or manually: copy skills/* next to your other skills
+# or manually: copy the bankai/ folder next to your other skills
 ```
 </details>
 
@@ -64,12 +71,13 @@ Flagship children: `spectacle` (signature law, arrival choreography), `domain-fi
 ## What's inside
 
 ```
-bankai/                THE ENTRY POINT — the canon, open this one
-skills/<name>/         the 106 children (one per curated source)
-skills/_CONVENTIONS.md binding format for every skill
+bankai/                    THE SKILL — the entry point (this is what gets installed)
+  SKILL.md                the canon: modes, dials, rulings, routing, delivery gate
+  skills/<name>/          the 106 sub-skills (one per curated source)
+  skills/_CONVENTIONS.md  binding format for every sub-skill
 ```
 
-Once installed, everything flattens into sibling folders in your skills directory — your agent discovers `bankai` as the entry point and it routes to the children on demand.
+Your agent sees ONE skill: `bankai`. It routes to the sub-skill it needs, when it needs it.
 
 Every child carries a `source:` link in its frontmatter — this is a research distillation of publicly published material, crediting the original authors. All credit for the underlying ideas belongs to them; the canon's contribution is the routing, the rulings, and the eval-hardened rules. If you're an author and want something corrected or removed, please open an issue.
 

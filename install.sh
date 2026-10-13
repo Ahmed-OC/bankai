@@ -41,8 +41,6 @@ install_one() {  # $1 = source dir
   cp -r "$1" "$TARGET/$NAME"
   COUNT=$((COUNT+1))
 }
-install_one "$ROOT/bankai"                       # the entry point
-for DIR in "$ROOT"/skills/*/; do install_one "$DIR"; done   # the children
-cp "$ROOT/skills/_CONVENTIONS.md" "$TARGET/" 2>/dev/null || true
+install_one "$ROOT/bankai"   # the entry point + its 106 sub-skills (children travel inside)
 echo "Installed $COUNT skills into: $TARGET"
 echo "Start with: bankai (it routes to the children automatically)."

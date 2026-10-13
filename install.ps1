@@ -48,9 +48,6 @@ function Install-One([string]$srcDir) {
   Copy-Item -Recurse $srcDir $dest
   $Script:count++
 }
-Install-One (Join-Path $Root "bankai")                          # the entry point
-Get-ChildItem -Directory (Join-Path $Root "skills") | ForEach-Object { Install-One $_.FullName }  # the children
-$conventions = Join-Path $Root "skills/_CONVENTIONS.md"
-if (Test-Path $conventions) { Copy-Item $conventions $Target -Force }
+Install-One (Join-Path $Root "bankai")   # the entry point + its 106 sub-skills (children travel inside)
 Write-Host "Installed $count skills into: $Target"
 Write-Host "Start with: bankai (it routes to the children automatically)."

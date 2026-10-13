@@ -1,0 +1,28 @@
+{
+  "name": "bankai-skills",
+  "version": "1.0.0",
+  "description": "bankai — the final form of UI/UX skills for AI agents. 107 skills that make coding agents design interfaces which don't look generated.",
+  "bin": {
+    "bankai": "bin/install.js"
+  },
+  "files": [
+    "bankai/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-OC/bankai.git"
+  },
+  "keywords": [
+    "agent-skills",
+    "claude",
+    "ui-ux",
+    "design-system",
+    "ai-agents",
+    "skills"
+  ],
+  "author": "Ahmed-OC",
+  "license": "MIT"
+}
