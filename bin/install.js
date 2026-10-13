@@ -35,6 +35,6 @@ if (!target) {
   process.exit(1);
 }
 
-copyRecursive(SRC, target);
+copyRecursive(SRC, path.join(target, 'bankai'));
 console.log('Installed bankai into: ' + target);
 console.log('Start with: bankai (it routes to its 106 sub-skills automatically).');
