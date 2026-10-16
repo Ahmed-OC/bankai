@@ -17,6 +17,12 @@ Before any code: run these four steps and write the result down. If you skip the
 
 **Refonte mode (existing surface — restyling, review, migration)**: before the engine runs, do the inventory-first pass: (1) **INVENTORY** every content block, feature, interaction and data shape the surface already covers — this is your R8 floor and none of it may silently vanish in the redesign; (2) **DIAGNOSE** against §7 + §8 — name the 3-5 specific weaknesses you are fixing (not vibes); (3) **DECIDE keep/change/kill** per section, out loud — a refonte that discards what works (content equity, structure users know) fails exactly like one that keeps what fails by inertia; (4) then run the engine below on the redesign. The existing artifact is the brief's equal: honor its covered requirements as strictly as a written brief (R8), and re-verify the inventory at the gate.
 
+**Refonte hard rules** (eval findings — unguided runs beat canon runs here before these rules):
+- **Behavior diff, not just content diff**: replay every state transition and async path of the source (pause/retry/cancel/undo, locks, queues, steppers); every source BUG enters the keep/change/kill table with a traced fix or an explicit "kept as-is" justification. A refonte that re-skins and re-ships a source bug (observed: a forward-locked stepper, a pause that never frees its queue slot — both fixed by unguided runs, both re-shipped by canon runs) fails review regardless of its design record.
+- **The record claims only what the file contains**: every mechanism named in the design record cites a line that exists (a record claiming "scrub" with no seek handler is a narrated PASS); dead mechanisms (unused classes, guards that never fire) are deleted, not documented; mechanical floors are recounted from the final file, never reported from intent.
+- **Identity anchors default KEEP**: brand hue, product voice, and per-item data shown to users stay unless the kill table names what replaces the information — a full hue swap on an existing product is a rebrand, an explicit decision; never trade shown data for a calmer grid.
+- **Undo restores invariants**: queue position, concurrency limits, focus — the restore path is checked against the same limits as the happy path (clamp on restore if it could exceed one).
+
 **Step 1 — Product mode** (from Impeccable's mode system; details → `impeccable`):
 
 | Mode | Product type | Scanability vs expression | Density | Motion budget | Expressiveness floor |
