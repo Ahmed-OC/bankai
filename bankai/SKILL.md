@@ -15,6 +15,8 @@ Why this exists: AI can now produce any interface instantly — which means undi
 
 Before any code: run these four steps and write the result down. If you skip them, you will default to the mean of everything you've built — which is exactly what slop is.
 
+**Refonte mode (existing surface — restyling, review, migration)**: before the engine runs, do the inventory-first pass: (1) **INVENTORY** every content block, feature, interaction and data shape the surface already covers — this is your R8 floor and none of it may silently vanish in the redesign; (2) **DIAGNOSE** against §7 + §8 — name the 3-5 specific weaknesses you are fixing (not vibes); (3) **DECIDE keep/change/kill** per section, out loud — a refonte that discards what works (content equity, structure users know) fails exactly like one that keeps what fails by inertia; (4) then run the engine below on the redesign. The existing artifact is the brief's equal: honor its covered requirements as strictly as a written brief (R8), and re-verify the inventory at the gate.
+
 **Step 1 — Product mode** (from Impeccable's mode system; details → `impeccable`):
 
 | Mode | Product type | Scanability vs expression | Density | Motion budget | Expressiveness floor |
