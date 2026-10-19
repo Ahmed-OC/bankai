@@ -66,7 +66,7 @@ You don't read 107 files. **Open `bankai` at the start of any UI work** — it c
 - **Rulings for conflicts** — R1 "should this animate?" (default: no), R8 "briefs are floors" (unrequested depth is mandatory), R9 "interaction floor" (undo, keyboard, honest states everywhere).
 - **The anti-slop ban list + mechanical pass** — 15 generated-work tells, closed by literal grep commands you run on your own output before shipping. A box checked without a command output is `UNVERIFIED`, never `PASS`.
 
-Flagship children: `spectacle` (signature law, arrival choreography), `domain-fit` (14-domain matrix), `micro-craft` (exact finishing formulas), `dynamism` (L0-L6 ladder, at-rest life that is TRUE or LABELED), `3d-craft` (3D interaction contract), `oklch`, `practical-typography`, `cmdk`, `sonner`, `rauno`… Full routing table lives in the master.
+Flagship children: `spectacle` (signature law, arrival choreography), `domain-fit` (14-domain matrix), `mobile` (the native bridge: Expo/RN/iOS/Android — HIG + Material 3 exact numbers, translated mechanisms), `micro-craft` (exact finishing formulas), `dynamism` (L0-L6 ladder, at-rest life that is TRUE or LABELED), `3d-craft` (3D interaction contract), `oklch`, `practical-typography`, `cmdk`, `sonner`, `rauno`… Full routing table lives in the master.
 
 ## What's inside
 
