@@ -28,7 +28,20 @@ The canon's DOCTRINE applies unchanged: product modes (§1), dials, variance wit
 
 ## 2. iOS laws (HIG, exact)
 
-- **Type ramp = system text styles, never arbitrary sizes**: largeTitle 34 / title 28·22·20 / headline 17sb / body 17 / callout 16 / subheadline 15 / footnote 13 / caption 12·11. Custom fonts must ride Dynamic Type (`UIFontMetrics`/relative) — a font that can't scale is the wrong font.
+- **Type ramp = system text styles, never arbitrary sizes** (default Large; body reaches 53pt at AX5 — layout must survive):
+
+| Style | pt | Weight | Use |
+|---|---|---|---|
+| largeTitle | 34 | 400 | screen title, top of stack |
+| title1 / title2 / title3 | 28 / 22 / 20 | 400 | page sections |
+| headline | 17 | 600 semibold | row titles, emphasized body |
+| body | 17 | 400 | DEFAULT body |
+| callout | 16 | 400 | secondary emphasis |
+| subheadline | 15 | 400 | row subtitles |
+| footnote | 13 | 400 | captions, metadata |
+| caption1 / caption2 | 12 / 11 | 400 | smallest labels |
+
+Custom fonts must ride Dynamic Type (`UIFontMetrics`/relative) — a font that can't scale is the wrong font; with static bundled fonts set weight via fontFamily names and omit fontWeight.
 - **Semantic colors** (`systemBackground`, `secondarySystemBackground`, `label`, `secondaryLabel`, `separator`) auto-adapt to dark mode and vibrancy; custom brand colors ship BOTH light+dark ≥4.5:1 (lightness-inversion derivation applies to customs only).
 - **SF Symbols** (9 weights × 3 scales, optically aligned) — never hand-rolled icon SVGs; every iOS symbol needs a Material counterpart on Android (`expo-symbols`).
 - **Tabs**: 2-5, icon + ALWAYS-visible label, bottom of screen; actions belong in a toolbar, never a tab bar. **Sheets** for short focused tasks; full-screen modal only for immersive work (video/photo/document); every modal has an obvious exit. **Alert** = unexpected critical info; **action sheet** = choices following an intentional action.
@@ -41,12 +54,22 @@ The canon's DOCTRINE applies unchanged: product modes (§1), dials, variance wit
 
 - **Adaptive, not fixed**: window WIDTH buckets compact <600dp / medium 600-839 / expanded ≥840; recompute at runtime (rotation/fold); navigation follows the bucket: bottom bar (compact, 3-5 destinations, 80dp, always-visible labels, active pill 64×32dp) → rail (medium) → drawer (expanded). Never `isTablet`.
 - **Edge-to-edge is enforced on Android 15 (SDK 35)**: draw behind status+nav bars, handle insets (`systemBars`, `displayCutout`, `systemGestures`); content obscured or fake letterbox bars = automatic fail.
-- **M3 type scale** (sp only, never dp for text; never sp for padding): display 57/45/36 · headline 32/28/24 · title 22/16/14 · **body 16/14/12 (16 = default)** · label 14/12/11, per-token line-heights/tracking from the spec table.
+- **M3 type scale** (sp only, never dp for text; never sp for padding; lineHeight in sp so it scales; fontScale 200% non-linear since Android 14):
+
+| Style | sp / lh | Tracking | Weight |
+|---|---|---|---|
+| display L/M/S | 57/64 · 45/52 · 36/44 | −0.25 / 0 / 0 | 400 |
+| headline L/M/S | 32/40 · 28/36 · 24/32 | 0 | 400 |
+| title L/M/S | 22/28 · 16/24 · 14/20 | 0 / 0.15 / 0.1 | 400 / 500 / 500 |
+| body L/M/S | 16/24 · 14/20 · 12/16 | 0.5 / 0.25 / 0.4 | 400 |
+| label L/M/S | 14/20 · 12/16 · 11/16 | 0.1 / 0.5 / 0.5 | 500 |
+
+**body large 16sp is the default.**
 - **Dark theme elevation is COLOR, not shadow**: surface tint + container roles lift surfaces (legacy ladder: white 0/5/7/8/9/11% for elevation 0/1/3/6/8/12dp); nav bars carry no drop shadow.
 - **Ripple is the pressed state**: bounded ripples for containers, unbounded for bare icons; a custom press flash reads instantly as non-native. Snackbar (NOT toast — custom toast views deprecated): max ONE action, text-label only, no auto-dismiss when an action exists, 4-10s without, swipe-dismissable.
 - **Buttons by emphasis ladder** (filled > tonal > elevated > outlined > text); common buttons 40dp tall in 48dp targets; top app bar 64dp/Title Large; **FAB only for the single primary action** — a FAB competing with a filled button is a conflict.
 - **Dynamic color (Material You) is the default on 12+** with a brand-seed scheme as fallback; error role colors (#B3261E/#F2B8B5), never hardcoded red.
-- **Motion tokens**: durations short 50-200 / medium 250-400 / long 450-600ms — nothing interactive over 600ms; **named patterns** (container transform, shared axis, fade through, fade) instead of invented transitions. Overscroll = stretch effect on 12+ (glow is ≤11); gesture-exclusion rects capped at 200dp/edge, reserved for genuine conflicts.
+- **Motion tokens**: durations short1-4 = 50/100/150/200ms (small components — enter ~50, exit ~200) · medium1-4 = 250/300/350/400ms (panel-size) · long1-4 = 450/500/550/600ms (full-screen — enter ~500, exit ~600) — **nothing interactive over 600ms**. Easing: emphasized `cubic-bezier(0.2,0,0,1)` default · emphasized-decelerate `(0.05,0.7,0.1,1)` enters · emphasized-accelerate `(0.3,0,0.8,0.15)` exits; standard set only for small utility transitions; linear only for continuous scrub. **Named patterns** (container transform, shared axis X/Y/Z, fade through, fade) instead of invented transitions. Overscroll = stretch on 12+ (glow is ≤11); gesture-exclusion rects capped at 200dp/edge.
 
 ## 4. React Native / Expo engineering laws
 
@@ -63,7 +86,46 @@ The canon's DOCTRINE applies unchanged: product modes (§1), dials, variance wit
 - **Keyboard**: iOS `KeyboardAvoidingView behavior="padding"`; Android `softwareKeyboardLayoutMode: "resize"` in app config and NO double-avoidance (`behavior={Platform.OS==='ios'?'padding':undefined}`).
 - **Release honesty**: EAS Update ships JS+assets ONLY (native change = store build); Apple 2.5.2 bans OTA that alters purpose/features — disclose OTA; develop on **expo-dev-client** once any native module/config plugin exists (Expo Go is prototype-only); strip `console.log` in production (a real JS-thread bottleneck); never disable Hermes.
 
-## 5. The mechanical pass, mobile edition (no narrated PASS — command/line-cited)
+## 5. Mechanism snippets (copy-paste, decision-bearing)
+
+```js
+// The threading law: shared values, never setState per frame
+const x = useSharedValue(0);
+const style = useAnimatedStyle(() => ({ transform: [{ translateX: x.value }] })); // UI thread
+// hop back to React ONLY at gesture end / threshold:
+useAnimatedReaction(() => x.value > SNAP, (over) => { if (over) scheduleOnRN(commit)(x.value); });
+
+// Springs by duration+dampingRatio (never mass/stiffness/damping)
+withSpring(x.value, { duration: 400, dampingRatio: 1 })            // settle
+withSpring(x.value, { duration: 300, dampingRatio: 0.8, velocity })// sheet with carry
+overshootClamping: true                                             // at hard edges
+
+// Keyboard, the non-double-avoiding way
+<KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+// + app.json (Android): "android": { "softwareKeyboardLayoutMode": "resize" }
+
+// Android predictive back (replace every onBackPressed override)
+const canGoBack = useCallback(() => stack.canPop(), [stack]);
+<BackHandler>AddCallback enabled={canGoBack} onClicked={stack.pop} />; // or OnBackPressedCallback.kt
+
+// Shadow split, encoded once in the theme
+shadow: Platform.select({ ios: { shadowColor:'#000', shadowOpacity:.12, shadowRadius:10, shadowOffset:{width:0,height:4} }, android: { elevation: 6 } })
+```
+
+## 6. The mobile slop list — tells that mark an app as generated or non-native
+
+1. Hamburger menu + custom web-style navbar fighting the platform's back gesture; tab slides.
+2. No ripple / no press feedback on Android; 300ms web-era delays on iOS; hover-style ghost states.
+3. Hardcoded white background ignoring OS dark mode; custom red instead of the error role.
+4. Blank-then-flash screens (no skeletons); branded "splash" with a fake progress bar.
+5. `.map()` over unbounded data; janky gestures (PanResponder / setState in handlers).
+6. Gesture-only actions with no visible button path; blocked back on modals.
+7. Haptic garnish on everything; more than one motion identity per screen.
+8. Two competing token systems pasted together; literals duplicated across files.
+9. Adaptive-blindness: fixed iPhone layout stretched on iPad/fold; content under system bars on Android 15.
+10. Store/OTA claims the build doesn't honor.
+
+## 7. The mechanical pass, mobile edition (no narrated PASS — command/line-cited)
 
 - [ ] `grep -rnE "[A-Za-z]'[A-Za-z]" src/` → 0 in user-facing strings
 - [ ] Hardcoded colors outside the theme → 0; every token used is defined; light+dark both ≥4.5:1 on smallest text (annotated in theme)
@@ -74,10 +136,10 @@ The canon's DOCTRINE applies unchanged: product modes (§1), dials, variance wit
 - [ ] Back gesture tested on every overlay (predictive back on Android); screen-reader pass done on one full flow (name it)
 - [ ] One haptic per action max; no fabricated liveness; OTA/store claims match behavior; launch screen static (no branding/progress)
 
-## 6. Children routing for mobile
+## 8. Children routing for mobile
 
 Web-specific children translate, not transfer: `cmdk` → native search/action-sheet patterns; `sonner` → **snackbar on Android** / native toasts never custom; `html-can-do-that`'s native-first check → **platform-API-first** (share, haptics, camera, filesystem via expo-modules — before JS reimplementations; `@expo/ui` for sheets/pickers/menus). Still read as-is: `domain-fit`, `spectacle` (Entice contexts), `micro-craft` (state layers = ripple/state-layer opacity math; elevation per §2-3), `dynamism` (ladder holds; mechanisms per §1 table), `web-haptics` (the synthesis basics), `loading-dev` (wait-length honesty), `oklch` (offline ramp math). For platform-native depth, the maintainers' skill repos (expo/skills, software-mansion-labs, android/skills) are the reference layer.
 
-## 7. Refonte on mobile
+## 9. Refonte on mobile
 
 The refonte hard rules apply verbatim — behavior diff is platform-agnostic. Identity anchors: the app's existing token system, type ramp, and motion language default KEEP (adopt-before-build — never introduce a second design system beside an existing one); a wholesale token swap is a rebrand decision, stated out loud.
