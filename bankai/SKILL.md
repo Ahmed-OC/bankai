@@ -111,6 +111,7 @@ Open children on demand; depth lives there, not here. **Reading discipline** (R1
 - **The design record names the mechanisms as build decisions**: visibility gate (`.is-hidden`), mutation-honesty plan, undo plan, init-hardening plan — restated in the last planning line before the first Write (eval: both 9.5/10 builds did this spontaneously; zero-decay window instead of a 14-minute-old read). In an Entice record, `spectacle` must appear (eval: an Entice build skipped the non-optional child and produced the wave's weakest output).
 
 **A. Starting / strategy**
+- **Mobile app (Expo / React Native / iOS / Android / APK)? → `mobile` FIRST** — it translates every canon mechanism to its native equivalent (hover→press, focus-visible→a11y focus, IO→viewability, rAF→UI-thread animation, prefers-reduced-motion→AccessibilityInfo, OKLCH→derived theme ramp) and its platform laws override web-specific wording in the rest of the canon; then continue this routing normally.
 - New product or screen → this file §1, then `domain-fit` (MANDATORY: derive palette/type/density/motion/trust-furniture from the domain × mode × risk matrix — no house style applied to every domain), then `impeccable` (mode), `taste` (doctrine + AI-tell ban list)
 - The build must impress (landing, portfolio, launch, Entice/Play) → `spectacle` FIRST (signature law, arrival choreography, scroll/cursor craft, balance laws) — non-optional for Entice/Play
 - Design principles / north star → `principles`
@@ -186,7 +187,7 @@ Open children on demand; depth lives there, not here. **Reading discipline** (R1
 
 ## 6. Stack posture (global)
 
-- Framework-neutral by construction: patterns are expressed as mechanisms (HTML/CSS/JS or framework-agnostic markup). Tailwind, React, Svelte, vanilla — port, don't assume.
+- Framework-neutral by construction: patterns are expressed as mechanisms (HTML/CSS/JS or framework-agnostic markup). Tailwind, React, Svelte, vanilla — port, don't assume. **Native mobile (Expo/RN/iOS/Android): `mobile` translates the web-mechanism wording and takes precedence there** (hover, focus-visible, IO, rAF, CSS easing, DOM bans do not apply literally on native targets).
 - Platform-first: check native capabilities (`html-can-do-that`) before any dependency; CSS is the design system's runtime (`code-source-of-truth` — code is the source of truth, mockups are sketches).
 - When a source shows library-idiom code (all Tailwind-ish registries do), port the mechanism to tokens/CSS — every child skill already did this work; use their ports.
 

@@ -50,6 +50,7 @@ Every skill in this folder distills ONE curated source into a self-contained, st
 - **portfolio** (person/agency site): the person's design signature, their stated philosophy, recurring techniques visible in their work, what to steal and what is personal style not to copy.
 
 ## Sibling skills (for Relations sections)
+- `mobile` — the native-app bridge (Expo/RN/iOS/Android): translates canon mechanisms to platform equivalents, platform laws override web wording on mobile targets
 
 Existing: domain-fit, micro-craft, spectacle, dynamism, 3d-craft, aicss, beautiful-ui, dot-matrix, emil-skills, impeccable, krehel-skills, magic-ui, taste, thinking-orbs, transitions, ui-skills, web-interface-guidelines, bankai.
 
