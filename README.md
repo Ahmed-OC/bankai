@@ -61,7 +61,7 @@ cd bankai && ./install.sh                    # macOS/Linux
 
 You don't read 107 files. **Open `bankai` at the start of any UI work** — it carries the shared doctrine and routes you to the 3-5 children your brief actually needs:
 
-- **The Differentiation Engine** — pick a product mode (Operate / Create / Consume / Entice / Play), set five dials explicitly (VARIANCE, MOTION, DENSITY, ORNAMENT, WARMTH), write a one-line design intent. Ban your first *two* concepts — the domain's obvious metaphor is the slop.
+- **The Differentiation Engine** — pick a product mode, then a THEME from the curated library (33 directions backed by 256 world-class references; the canon proposes, you choose), (Operate / Create / Consume / Entice / Play), set five dials explicitly (VARIANCE, MOTION, DENSITY, ORNAMENT, WARMTH), write a one-line design intent. Ban your first *two* concepts — the domain's obvious metaphor is the slop.
 - **Exact numbers, not vibes** — motion bands in ms, state-layer lightness deltas, contrast ratios to annotate, touch targets, stagger caps, easing families.
 - **Rulings for conflicts** — R1 "should this animate?" (default: no), R8 "briefs are floors" (unrequested depth is mandatory), R9 "interaction floor" (undo, keyboard, honest states everywhere).
 - **The anti-slop ban list + mechanical pass** — 15 generated-work tells, closed by literal grep commands you run on your own output before shipping. A box checked without a command output is `UNVERIFIED`, never `PASS`.
@@ -72,9 +72,11 @@ Flagship children: `spectacle` (signature law, arrival choreography), `domain-fi
 
 ```
 bankai/                    THE SKILL — the entry point (this is what gets installed)
-  SKILL.md                the canon: modes, dials, rulings, routing, delivery gate
-  skills/<name>/          the 106 sub-skills (one per curated source)
+  SKILL.md                the canon: modes, dials, theme selection, rulings, routing, delivery gate
+  skills/<name>/          the 106 sub-skills (one per curated source) + the `mobile` native bridge
   skills/_CONVENTIONS.md  binding format for every sub-skill
+  library/THEMES.md       33 curated directions — the theme picker (propose 3-5, caller chooses)
+  library/parts/*.md      256 world-class references, mechanism-level, 7 zones (mobile-first)
 ```
 
 Your agent sees ONE skill: `bankai`. It routes to the sub-skill it needs, when it needs it.
