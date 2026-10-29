@@ -9,6 +9,8 @@ A taxonomy of 33 themes distilled from the 256-entry inspiration library (`parts
 3. When a human is present, let THEM choose from the candidates; when unattended, pick by fit + anti-convergence — never reuse your previous build's theme.
 4. Derive the concept's mechanisms from the chosen themes' mechanism palettes, and cite the exemplars (Name — part number) in the design record.
 
+**Visual layer (local, generated):** run `python library/picker.py` once — it screenshots the exemplars into `library/shots/` (gitignored; ~85% succeed — bot-protected/WebGL-heavy sites fall back to text cards) and builds `library/PICKER.html`, the visual picker grid. When proposing themes to a caller, READ the candidate themes' exemplar images (`shots/<slug>.png`) so your proposal is grounded in what the references actually look like, and open PICKER.html in their browser so they CHOOSE with their eyes. The images are for local design research only — never republished.
+
 ---
 
 ## Family A — Editorial & Print
